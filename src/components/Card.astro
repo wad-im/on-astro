@@ -1,0 +1,20 @@
+---
+interface Props {
+    title: string,
+    slug: string
+}
+const { title, slug } = Astro.props;
+---
+
+<li class='card'>
+    <a class='post-url' href={`/${slug}/`}>
+        {title}
+    </a>
+</li>
+
+<style>
+    .card {
+        list-style: none;
+        padding-left: 0;
+    }
+</style>

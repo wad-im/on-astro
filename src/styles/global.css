@@ -5,8 +5,78 @@
     font-style: normal;
     font-display: swap;
   }
-
-  html {
-    background-color: #f1f5f9;
-    font-family: 'Public Sans', system-ui, sans-serif;
+@font-face {
+    font-family: 'Public Sans';
+    src: url('public/font/PublicSans-Italic[wght].ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
   }
+:root {
+  --primary-blue: #0284C7;
+  --main-text: #404040;
+  --main-bg: #FAFAFA;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  font-size: 1rem;
+  font-family: 'Public Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+p, ul, ol {
+  line-height: 1.625;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+ul, ol {
+  margin-left: 2rem;
+  list-style-position: outside;
+}
+li {
+  padding-left: .5rem;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+  font-weight: 600;
+}
+h2 {
+  font-size: 1.5;
+  line-height: 1.5;
+  margin-bottom: 1.125rem;
+  margin-top: 1.125rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.375;
+  margin-top: 1.4rem;
+  margin-bottom: .75rem;
+  font-weight: 500;
+}
+h4 {
+  line-height: 1.625;
+}
+a {
+  color: #404040;
+}
+strong {
+  font-weight: 500;
+}
+@media screen and (max-width: 37rem){
+  h1 {
+      font-weight:700;
+  }
+  h2, h3 {
+      font-weight:600;
+  }
+}

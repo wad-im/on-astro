@@ -1,7 +1,22 @@
 ---
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
+const posts = await Astro.glob('../content/*.mdx');
+
 ---
 
 <Layout>
-	I am inside the body
+	<section>
+		<ul class='grid'>
+			{posts.map(post => (
+				<Card title={post.frontmatter.title} slug={post.frontmatter.slug} />
+			))}
+		</ul>
+	</section>
 </Layout>
+
+<style>
+	.grid {
+		margin-left: 0;
+	}
+</style>
